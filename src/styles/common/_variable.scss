@@ -1,0 +1,45 @@
+/*
+   公用变量
+*/
+//默认字体
+$fontStyleBase:-apple-system,
+BlinkMacSystemFont,
+"PingFang SC",
+"Helvetica Neue",
+"Microsoft Yahei",
+STHeiti,
+Tahoma,
+Simsun,
+sans-serif;
+//文本主颜色
+$blue-1: #016CFF;
+$blue-2: #0062FF;
+$blue-1-hover: #2581FF;
+$color-primary: $blue-1;
+$color-text-primary: #000 !default;
+//文本第二使用颜色
+$color-text-second: #666 !default;
+//文本第三使用颜色
+$color-text-third: #333 !default;
+
+$custom-container-max-width-one: 1200px;
+$custom-container-max-width-two: 1400px;
+$red: #dc3545;
+
+// 字体大小
+$fontSizeSmall: 16px;
+$fontSizeBase: 20px;
+$fontSizeMedium: 24px;
+$fontSizeBig: 30px;
+//主圆角
+$borderRadiusBase: 4px !default;
+
+/* Transition
+-------------------------- */
+//动画默认设置
+$timeBase:0.5s;
+$cubicBezierBase: cubic-bezier(.215, .61, .355, 1) !default;
+$allTransition: all $timeBase $cubicBezierBase;
+
+//左右主边距  内边距  外边距
+$marginPrimary: 10px;

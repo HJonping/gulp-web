@@ -1,0 +1,98 @@
+@import "variable";
+
+@mixin clearfix {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+//center
+@mixin center($position: absolute) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin centerHorizontal($position: absolute) {
+    position: $position;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centerVertical($position: absolute) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//gradient
+@mixin gradientVertical($start, $stop, $from: 0, $to: 100%) {
+    background: $start; // old browsers
+    background: linear-gradient(to bottom,
+            $start $from,
+            $stop $to); // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+}
+
+@mixin gradientHorizontal($start, $stop, $from: 0, $to: 100%) {
+    background: $start; // old browsers
+    background: linear-gradient(to right,
+            $start $from,
+            $stop $to); // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+}
+
+@mixin gradientRadial($start, $stop, $from: 0, $to: 100%, $shape: circle) {
+    background: $start; // old browsers
+    background: radial-gradient($shape at center,
+            $start $from,
+            $stop $to); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+}
+
+//ellipsis
+@mixin textEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//多行溢出隐藏 multi-overflow
+@mixin multiTextOverflow($index: 2) {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $index;
+    overflow: hidden;
+}
+
+//盒模型上下左右居中对齐
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg($size: contain) {
+    background-repeat: no-repeat;
+    background-size: $size;
+}
+
+@mixin horizontalPadding($value: $marginPrimary) {
+    padding-left: $value;
+    padding-right: $value
+}
+
+
+//px转rem
+@function pxToRem($px) {
+    //$px为需要转换的字号
+    @return calc($px / 16px * 1rem); //16px为根字体大小 浏览器默认
+}
