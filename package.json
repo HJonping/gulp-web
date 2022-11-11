@@ -1,7 +1,7 @@
 {
-  "name": "gulp",
-  "version": "1.0.2",
-  "description": "gulp",
+  "name": "gulpweb",
+  "version": "1.0.1",
+  "description": "A small web framework built with gulp",
   "scripts": {
     "serve": "gulp serve",
     "watch:nom": "gulp watch --mergeModule false",
