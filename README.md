@@ -9,43 +9,63 @@ yarn install  /npm install
 ### 配置
 ```
 相应的文件和目录需要和gulp配置里面一样，不一致需要自己修改，如下图
-│  
-├─include
-│      footer.html
-│      nav.html
-│      
-├─pages
-│      case.html
-│      product.html
-│      service.html
-│      
-├─scripts
-│  │  case.js
-│  │  product.js
-│  │  
-│  └─modules
-│      ├─common
-│      │      index.js
-│      │      
-│      └─plugin
-│              jquery-1.6.1.min.js
-│              
-├─static
-│  └─images
-│      │  bg_1.png
-│      │  
-│      └─icon
-│              ability_icon_1.png
-│              
-└─styles
-    │  case.scss
-    │  product.scss
-    │  service.scss
-    │  
-    └─common
-            _base.scss
-            _mixins.scss
-            _variable.scss
+├─.babelrc
+├─.gitignore
+├─gulpfile.babel.js
+├─package.json
+├─README.md
+├─yarn.lock
+├─src
+|  ├─styles
+|  |   ├─index.scss
+|  |   ├─product.scss
+|  |   ├─common
+|  |   |   ├─_base.scss
+|  |   |   ├─_mixins.scss
+|  |   |   └_variable.scss
+|  ├─static
+|  |   ├─images
+|  |   |   ├─bg_1.jpg
+|  |   |   ├─icon
+|  |   |   |  └icon_top.png
+|  ├─scripts
+|  |    ├─index.js
+|  |    ├─product.js
+|  |    ├─modules
+|  |    |    ├─plugin
+|  |    |    |   ├─jquery-3.6.1.min.js
+|  |    |    |   ├─jquery-tab.js
+|  |    |    |   └jquery-to-top.js
+|  |    |    ├─common
+|  |    |    |   └index.js
+|  ├─pages
+|  |   ├─index.html
+|  |   └product.html
+|  ├─include
+|  |    ├─footer.html
+|  |    └nav.html
+├─dist
+|  ├─20221111.zip
+|  ├─styles
+|  |   ├─index copy.css
+|  |   ├─index.css
+|  |   └product.css
+|  ├─static
+|  |   ├─images
+|  |   |   ├─bg_1 copy.jpg
+|  |   |   ├─bg_1.jpg
+|  |   |   ├─icon
+|  |   |   |  ├─icon_top copy 2.png
+|  |   |   |  ├─icon_top copy.png
+|  |   |   |  └icon_top.png
+|  ├─scripts
+|  |    ├─case.js
+|  |    ├─index.js
+|  |    └product.js
+|  ├─pages
+|  |   ├─index copy.html
+|  |   ├─index.html
+|  |   └product.html
 ```
 
 ### 执行命令
